@@ -155,21 +155,21 @@ namespace BoletoNet
             #endregion
 
             #region Grupo4
-            ////string DVcodigoBanco = Utils.FormatCode(this.Codigo.ToString(), 3);//3
-            ////string DVcodigoMoeda = boleto.Moeda.ToString();//1
-            ////string DVvalorNominal = Utils.FormatCode(boleto.ValorBoleto.ToString("f").Replace(",", "").Replace(".", ""), 10);//10
-            ////string DVfixo = "9";//1
-            ////string DVcodigoCedente = Utils.FormatCode(boleto.Cedente.Codigo.ToString(), 7).ToString();//7
-            //////string DVnossoNumero = Utils.FormatCode(boleto.NossoNumero, 12) + Mod11Santander(Utils.FormatCode(boleto.NossoNumero, 12));
-            ////string DVnossoNumero = Utils.FormatCode(boleto.NossoNumero, 12) + CalcularDVSantander(Utils.FormatCode(boleto.NossoNumero, 12));
-            ////string DVtipoCarteira = boleto.Carteira;//3;
+            string DVcodigoBanco = Utils.FormatCode(this.Codigo.ToString(), 3);//3
+            string DVcodigoMoeda = boleto.Moeda.ToString();//1
+            string DVvalorNominal = Utils.FormatCode(boleto.ValorBoleto.ToString("f").Replace(",", "").Replace(".", ""), 10);//10
+            string DVfixo = "9";//1
+            string DVcodigoCedente = Utils.FormatCode(boleto.Cedente.Codigo.ToString(), 7).ToString();//7
+            //string DVnossoNumero = Utils.FormatCode(boleto.NossoNumero, 12) + Mod11Santander(Utils.FormatCode(boleto.NossoNumero, 12));
+            string DVnossoNumero = Utils.FormatCode(boleto.NossoNumero, 12) + CalcularDVSantander(Utils.FormatCode(boleto.NossoNumero, 12));
+            string DVtipoCarteira = boleto.Carteira;//3;
 
-            ////string calculoDVcodigo = string.Format("{0}{1}{2}{3}{4}{5}{6}{7}{8}",
-            ////    DVcodigoBanco, DVcodigoMoeda, fatorVencimento, DVvalorNominal, DVfixo, DVcodigoCedente, DVnossoNumero, IOS, DVtipoCarteira);
+            string calculoDVcodigo = string.Format("{0}{1}{2}{3}{4}{5}{6}{7}{8}",
+                DVcodigoBanco, DVcodigoMoeda, fatorVencimento, DVvalorNominal, DVfixo, DVcodigoCedente, DVnossoNumero, IOS, DVtipoCarteira);
 
-            ////string grupo4 = Mod10Mod11Santander(calculoDVcodigo, 9).ToString() + " ";
+            string grupo4 = Mod10Mod11Santander(calculoDVcodigo, 9).ToString() + " ";
 
-            var grupo4 = boleto.CodigoBarra.DigitoVerificador + " ";
+            //var grupo4 = boleto.CodigoBarra.DigitoVerificador + " ";
 
             #endregion
 
